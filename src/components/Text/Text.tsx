@@ -1,15 +1,23 @@
 import React from 'react';
+import styled, { css } from 'styled-components';
+import { FontSizes } from '../../themes/createFontSize';
+import { useTheme } from '../../hooks/useTheme';
 
 export type TextProps = {
-  text: string;
-  className?: string;
+  size?: FontSizes;
 };
 
-export const Text: React.FC<TextProps> = ({ text, className = '' }) => {
-  return <p className={className}>{text}</p>;
+export type Props = TextProps & {
+  children: React.ReactNode;
 };
 
-Text.defaultProps = {
-  text: 'hoge',
-  className: 'hoge',
+export const Text: React.FC<Props> = ({ ...props }) => {
+  return <Wrapper {...props}></Wrapper>;
 };
+
+const Wrapper = styled.span<TextProps>(({ size = 'L' }) => {
+  const { fontSize } = useTheme();
+  return css`
+    font-size: ${fontSize[size]};
+  `;
+});

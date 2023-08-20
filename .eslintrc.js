@@ -3,25 +3,31 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["plugin:react/recommended", "prettier", "plugin:storybook/recommended"],
-  parser: "@typescript-eslint/parser",
+  extends: [
+    'plugin:react/recommended',
+    'prettier',
+    'plugin:storybook/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: "module",
+    sourceType: 'module',
   },
-  plugins: ["react"],
+  plugins: ['react'],
   settings: {},
   rules: {
-    "react/prop-types": 0,
-    "react/jsx-props-no-spreading": [
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 0,
+    'react/jsx-props-no-spreading': [
       2,
       {
-        html: "enforce",
-        custom: "ignore",
-        explicitSpread: "enforce",
+        html: 'enforce',
+        custom: 'ignore',
+        explicitSpread: 'enforce',
       },
     ],
   },
