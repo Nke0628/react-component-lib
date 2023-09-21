@@ -7,6 +7,7 @@ import { Text } from './Text';
 export default {
   title: 'Text/Text',
   component: Text,
+  tags: ['autodocs'],
 } as ComponentMeta<typeof Text>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
