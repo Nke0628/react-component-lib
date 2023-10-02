@@ -5,7 +5,7 @@ import { Text } from './Text';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Text/Text',
+  title: 'Components/Text',
   component: Text,
   tags: ['autodocs'],
 } as ComponentMeta<typeof Text>;
