@@ -1,12 +1,17 @@
-import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 import { Form } from './Form';
 
-export default {
+const meta = {
   title: 'Components/Form',
   component: Form,
   tags: ['autodocs'],
-} as ComponentMeta<typeof Form>;
+} satisfies Meta<typeof Form>;
+export default meta;
 
-const Template: ComponentStory<typeof Form> = (args) => <Form {...args}></Form>;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
+export const Default: Story = {
+  render: (args) => {
+    return <Form {...args}></Form>;
+  },
+};

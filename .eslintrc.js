@@ -22,13 +22,6 @@ module.exports = {
     'react/jsx-uses-react': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 0,
-    'react/jsx-props-no-spreading': [
-      2,
-      {
-        html: 'enforce',
-        custom: 'ignore',
-        explicitSpread: 'enforce',
-      },
-    ],
+    'react/jsx-props-no-spreading': 'off',
   },
 };
